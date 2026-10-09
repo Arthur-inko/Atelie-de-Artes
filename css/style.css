@@ -104,13 +104,6 @@ body::selection {
     align-self: flex-start;
     box-shadow: 4px 4px 0 var(--vermelho);
 }
-#blocos article:nth-child(even) {
-    background: var(--vermelho);
-    align-self: flex-end;
-    background-image: radial-gradient(circle, var(--ver-claro2) 0%, var(--ver-claro2) 15%, transparent 10%);
-    background-size: 20px 20px;
-    background-position: 0 0, 20px 20px;
-}
 #blocos img {
     width: 100%;
     max-width: 200px;
@@ -174,4 +167,41 @@ footer {
     color: white;
     font-size: 45px;
     cursor: pointer;
+}
+
+@media (min-width: 501px) {
+    #blocos article:nth-child(even) {
+        background: var(--vermelho);
+        align-self: flex-end;
+        background-image: radial-gradient(circle, var(--ver-claro2) 0%, var(--ver-claro2) 15%, transparent 10%);
+        background-size: 20px 20px;
+        background-position: 0 0, 20px 20px;
+    }
+}
+
+@media (max-width: 500px) {
+    #titulo p {
+        font-size: 0.8rem;
+    }
+    #titulo::before {
+        width: 40vw;
+        height: 40vw;
+        box-shadow: 5px 5px 0 2px var(--tinta);
+    }
+    .ballet {
+        font-size: 5.5rem;
+    }
+    #blocos {
+        padding: 1rem 2rem;
+    }
+    #blocos article {
+        align-self: center;
+        max-width: 67%;
+    }
+    #blocos article:nth-child(even) {
+        background: var(--vermelho);
+        background-image: radial-gradient(circle, var(--ver-claro2) 0%, var(--ver-claro2) 15%, transparent 10%);
+        background-size: 20px 20px;
+        background-position: 0 0, 20px 20px;
+    }
 }
